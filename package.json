@@ -1,0 +1,40 @@
+{
+  "name": "@mjt-services/asr-service-2025",
+  "version": "2025.1.15-0945",
+  "sideEffects": false,
+  "description": "asr service",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "docs": "typedoc src/index.ts",
+    "build-docs": "pnpm run build && pnpm run docs",
+    "changelog": "./scripts/changes.sh > CHANGELOG.md",
+    "changelog-version": "pnpm run changelog && ./scripts/version.sh",
+    "publish": "pnpm run build-docs && pnpm run changelog-version",
+    "start": "deno run --allow-net --allow-env --allow-read ./dist/index.js",
+    "build": "pnpm run build-rollup && pnpm run build-docker",
+    "build-rollup": "rollup -c",
+    "build-docker": "scripts/build.sh",
+    "watch": "rollup -c --watch",
+    "check": "tsc --noEmit -w"
+  },
+  "keywords": [],
+  "author": "Matt Taylor (https://mjt.dev)",
+  "license": "MIT",
+  "dependencies": {
+    "@mjt-engine/assert": "github:mjt-engine/assert",
+    "@mjt-engine/message": "github:mjt-engine/message",
+    "@mjt-engine/object": "github:mjt-engine/object",
+    "@mjt-services/asr-common-2025": "github:mjt-services/asr-common-2025",
+    "@mjt-services/textgen-common-2025": "github:mjt-services/textgen-common-2025",
+    "commander": "^12.0.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "tsx": "^4.7.1",
+    "typedoc": "^0.27.6",
+    "typescript": "^5.7.3"
+  }
+}

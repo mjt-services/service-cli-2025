@@ -1,0 +1,6 @@
+#!/usr/bin/env -S pnpm exec tsx
+// import { play } from "./../src/play";
+import { textgenAction } from "../src/action/textgenAction";
+
+// play();
+textgenAction();
