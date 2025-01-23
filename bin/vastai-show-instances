@@ -1,0 +1,5 @@
+#!/usr/bin/env -S pnpm exec tsx
+
+import { vastaiShowInstancesAction } from "../src/action/vastaiShowInstancesAction";
+
+vastaiShowInstancesAction();

@@ -1,0 +1,5 @@
+#!/usr/bin/env -S pnpm exec tsx
+
+import { vastaiSearchAction } from "../src/action/vastaiSearchAction";
+
+vastaiSearchAction();

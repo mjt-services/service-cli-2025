@@ -3,6 +3,7 @@ import { Messages } from "@mjt-engine/message";
 import { assertValue } from "@mjt-engine/assert";
 import type { AsrConnectionMap } from "@mjt-services/asr-common-2025";
 import type { TextgenConnectionMap } from "@mjt-services/textgen-common-2025";
+import type { VastaiConnectionMap } from "@mjt-services/vastai-common-2025";
 import type { Env } from "./Env";
 import { loadEnvFile } from "./loadEnv";
 
@@ -13,7 +14,7 @@ export const initConnection = async () => {
   const url = assertValue(env.NATS_URL);
 
   const con = await Messages.createConnection<
-    AsrConnectionMap & TextgenConnectionMap,
+    AsrConnectionMap & TextgenConnectionMap & VastaiConnectionMap,
     Env
   >({
     // options: { log: console.log },

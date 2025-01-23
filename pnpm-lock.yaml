@@ -23,6 +23,9 @@ importers:
       '@mjt-services/textgen-common-2025':
         specifier: github:mjt-services/textgen-common-2025
         version: https://codeload.github.com/mjt-services/textgen-common-2025/tar.gz/63a281c70df93471bfb61647be000800b1661eca
+      '@mjt-services/vastai-common-2025':
+        specifier: github:mjt-services/vastai-common-2025
+        version: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/008beb3a32f857b3179d843ec59feb21e978fe4c
       commander:
         specifier: ^12.0.0
         version: 12.1.0
@@ -217,6 +220,10 @@ packages:
   '@mjt-services/textgen-common-2025@https://codeload.github.com/mjt-services/textgen-common-2025/tar.gz/63a281c70df93471bfb61647be000800b1661eca':
     resolution: {tarball: https://codeload.github.com/mjt-services/textgen-common-2025/tar.gz/63a281c70df93471bfb61647be000800b1661eca}
     version: 2025.1.14-1120
+
+  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/008beb3a32f857b3179d843ec59feb21e978fe4c':
+    resolution: {tarball: https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/008beb3a32f857b3179d843ec59feb21e978fe4c}
+    version: 2025.1.21-1232
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     resolution: {integrity: sha512-QZHtlVgbAdy2zAqNA9Gu1UpIuI8Xvsd1v8ic6B2pZmeFnFcMWiPLfWXh7TVw4eGEZ/C9TH281KwhVoeQUKbyjw==}
@@ -563,6 +570,10 @@ snapshots:
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
 
   '@mjt-services/textgen-common-2025@https://codeload.github.com/mjt-services/textgen-common-2025/tar.gz/63a281c70df93471bfb61647be000800b1661eca':
+    dependencies:
+      '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
+
+  '@mjt-services/vastai-common-2025@https://codeload.github.com/mjt-services/vastai-common-2025/tar.gz/008beb3a32f857b3179d843ec59feb21e978fe4c':
     dependencies:
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
 

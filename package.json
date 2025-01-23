@@ -28,6 +28,7 @@
     "@mjt-engine/object": "github:mjt-engine/object",
     "@mjt-services/asr-common-2025": "github:mjt-services/asr-common-2025",
     "@mjt-services/textgen-common-2025": "github:mjt-services/textgen-common-2025",
+    "@mjt-services/vastai-common-2025": "github:mjt-services/vastai-common-2025",
     "commander": "^12.0.0",
     "dotenv": "^16.4.7"
   },
