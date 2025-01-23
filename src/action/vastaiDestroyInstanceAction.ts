@@ -1,22 +1,22 @@
 import { Command } from "commander";
 import { initConnection } from "../initConnection";
 
-export const vastaiSearchAction = () => {
+export const vastaiDestroyInstanceAction = () => {
   const program = new Command();
   program
-    .description("Vastai search")
-    .argument("<query>", "query for vastai search")
-    .action(async (query, options) => {
+    .description("Vastai create instance")
+    .argument("<contract-id>", "machine id")
+    .action(async (contractId) => {
       const con = await initConnection();
       const resp = await con.request({
         request: {
           body: {
-            query: query,
+            contractId,
           },
         },
-        subject: "vastai.search",
+        subject: "vastai.destroy.instance",
       });
-      console.log("resp",resp);
+      console.log("resp", resp);
       process.exit(0);
     });
 

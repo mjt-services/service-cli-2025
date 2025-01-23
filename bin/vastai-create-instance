@@ -1,0 +1,5 @@
+#!/usr/bin/env -S pnpm exec tsx
+
+import { vastaiCreateInstanceAction } from "../src/action/vastaiCreateInstanceAction";
+
+vastaiCreateInstanceAction();
